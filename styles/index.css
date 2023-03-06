@@ -1,12 +1,13 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 body {
     background-color: grey;
 }
 .nav {
     list-style-type: none;
-    margin: 0;
+    margin-left: -8px;
+    margin-right: -6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     padding: 0;
     overflow: hidden;
     background-color: #333;
@@ -14,10 +15,10 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-  }
-
+}
   li {
     float: left;
+    display: block; /*what does display:block mean?*/
     text-align: center;
     font-size: 14px;
   }
@@ -26,7 +27,7 @@ body {
     display: block;
     color: lightblue;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 28px;
     text-decoration: none;
   }
   
