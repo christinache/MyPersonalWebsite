@@ -1,49 +1,502 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio Website</title>
+    <title>Document</title>
     <style>
-
     </style>
-    <link rel="stylesheet" href="styles/index.css" />
+        <link rel="stylesheet" href="styles/utube.css">
 </head>
 <body>
 
-    <ul class="nav">
-        <li><a class="active" href="#welcome">Welcome</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#work">Work Experience</a></li>
-        <li><a href="#leadership">Leadership Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact Info</a></li>
-      </ul>
-    <br>
-    <br>
-    <br>
-    
-    <h1>Christina Chen</h1>
-    <p>Product Manager | Program Manager | Community Architect</p>
-    <!--
-    <p>
-        <ul class="resume">
-            <li><a href="#link">Product Management Resume</a></li>
-            <li><a href="#link">Program Management Resume</a></li>
-            <li><a href="#link">Community Architect Resume</a></li>
+<!--Navigation Bar-->
+    <nav>
+        <ul class="navbar">
+            <li class="nb"><a class="active" href="#welcome">Welcome</a></li>
+            <li class="nb"><a href="#about">About</a></li>
+            <li class="nb"><a href="#work">Work</a></li>
+            <li class="nb"><a href="#skills">Skills</a></li>
+            <li class="nb"><a href="#contact">Contact</a></li>
         </ul>
-    </p>
+    </nav>
+    
+<!--Welcome/Home Page-->
+    <div id="welcome">
+        <section>
+            <h1 class="first">Hi! I'm Christina Chen.</h1>
+            <h1 class="first">A Product Manager.</h1>
+        </section>
+
+        <section>
+            <div id="resume-button">
+                <a href="https://drive.google.com/file/d/1Gny4T0yuMEqTA-41G7bQmsxOnqtn6uuE/view?usp=sharing">Resume</a>
+            </div>
+        </section>
+
+        <section id="description">
+            <p>I’m also a part-time podcaster and lover of building communities whenever I go.</p>
+        </section>
+    </div>
+
+<!--About Page-->
+    <div id="about">
+        <div class="wrapper">
+            <div id="headshot"><img src="images/headshot.jpg" alt="headshot" width="350"></div>
+            <div id="about-text">
+                <h1>Christina Chen (she/her)</h1>
+                <h2>Product Manager</h2>
+                <br>
+                <p>Hi everyone! I am an energetic, empathetic, and eager first-generation student who is passionate about education, women empowerment and sustainability 🙂</p>
+                <p>As an aspiring product manager, I am curiosity-driven in everything that I take on and enjoy learning and working in fast-paced environments. Additionally, I value opportunities that have inspiring visions and opportunities for growth.I have both product and entrepreneurial experience in various industries and am passionate about improving user experience through design, especially in tech!</p>
+                <p>I love building communities at Babson through problem-solving, program management, and execution. I have started new initiatives, shifted perspectives, and seen growth in Alpha Kappa Psi (co-ed business fraternity), Reynolds Campus Center, TEDxBabson College, and more. If you need someone who gets things done, let’s work together :)</p>
+                <p>I love learning about people and hearing their stories. I have learned so much through formal and informal mentorship, so I’d love to give back! Feel free to email me at cchen7@babson.edu. Let’s chat!</p>
+            </div>
+        </div>
+    </div>
+
+<!--Work Experience-->
+    <div id="work">
+    <!--BobaTalks-->
+        <div class="flex-container">
+            <!--BobaTalks Logo-->
+            <div id="bt">
+                <a href="https://www.bobatalks.com/"><img src="images/bobatalks.png" alt="BobaTalks Logo" width="350"></a>
+            </div>
+
+            <!--BobaTalks Info-->
+            <div class="text">
+                <h2>BobaTalks</h2>
+                <p>A nonprofit that provides students with accessible mentorship and create opportunities.</p>
+                <h3>Seattle, WA &nbsp; | &nbsp; MARCH 2023 - PRESENT</h3>
+                <h4>Incoming Tech Project Manager</h4>
+                <ul class="bullets">
+                    <li>(will update later)</li>
+                </ul>
+            </div>
+        </div>
+
+    <!--Enrole-->
+        <div class="flex-container">
+            <!--Enrole Logo-->
+            <div id="enroll">
+                <a href="https://www.enroleapp.com/"><img src="images/enrole.png" alt="Enrole Logo" width="350"></a>
+            </div>
+
+            <!--Enrole Info-->
+            <div class="text">
+                <section>
+                    <h2>Enrole</h2>
+                    <p>A startup recruitment platform that connects startups to technical talent through Neuromatch, a technical resume translator.</p>
+                    <h3>Cupertino, CA &nbsp; | &nbsp; OCTOBER 2022 - JANUARY 2023</h3>
+                    <h4>Product Manager Intern</h4>
+                    <ul class="bullets">
+                        <li>Launched Neuromatch feature (Web). Scaled user database to 90 users first week post-launch by initiating product strategy.</li>
+                        <li>Increased feature accuracy to generate non-technical highlights from 40% to 73% with collected first week resume data.</li>
+                        <li>Defined 15+ user stories, road mapping, and got ownership of 70% accepted new features, including a web onboarding platform with a resume importing feature, user guided journeys, and clip-based video recording for elevator pitch.</li>
+                        <li>Jumpstarted TikTok marketing campaign, generating over 6K in viewership and wrote copyrighting for all marketing content.</li>
+                         
+                    </ul>
+                </section>
+                <br>
+                <section>
+                    <h3>Cupertino, CA &nbsp; | &nbsp; MAY 2022 - OCTOBER 2022</h3>
+                    <h4>Product Marketing Intern</h4>
+                    <ul class="bullets">
+                        <li>Collaborated across functions and reduced friction in user onboarding journey by identifying 50+ critical bug issues in Testflight.</li>
+                        <li>Revamped new user onboarding flow after conducting 6 user interviews and collecting 20+ user churn rate via Google Analytics.</li>
+                        <li>Automated social media marketing by implementing a Buffer integration, and reduced weekly time spent posting by 59%.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+    <!--Quicksulation-->
+        <div class="flex-container">
+            <!--Q Logo-->
+            <div id="quick">
+                <a href="https://www.linkedin.com/company/quicksulation/about/"><img src="images/quicksulation.jfif" alt="quicksulation logo" width="350"></a>
+            </div>
+            
+            <!--Q Info-->
+            <div class="text">
+                <h2>Quicksulation</h2>
+                <p>An academically sponsored business venture that promotes outdoor activity within post-COVID epidemic Wellesley community.</p>
+                <h3>Wellesley, MA &nbsp; | &nbsp; SEPTEMBER 2021 - APRIL 2022</h3>
+                <h4>Chief Technology Officier</h4>
+                <ul class="bullets">
+                    <li>Led IT, Operations, and Marketing teams using Agile to maintain accurate information and inventory of website.</li>
+                    <li>Designed landing page and scaled to over 2,000 website views, as well as broke even, reaching 43.2% of sales out of state and 56.8% sales in state, all within the first month.</li>
+                    <li>Managed all technical support of company and implemented over 20+ bug fixes based on client feedback and reviews.</li>
+                    <li>Strategized collaboratively with marketing and operations team to increase completed purchases with personalization option.</li>
+                </ul>
+            </div>
+        </div>
+
+    <!--CODE
+        <div class="flex-container">
+            ;)
+        </div>
     -->
 
-    <section>
-    <p>
-        <h2>About Me</h2>
-        <p>Hi! My name is Christina and I am an energetic, empathetic, and eager first-generation student who is passionate about education, women empowerment and sustainability</p>
-        <p>As an aspiring product manager, I am curiosity-driven in everything that I take on and enjoy learning and working in fast-paced environments. Additionally, I value opportunities that have inspiring visions and opportunities for growth.</p>
-        <p>I have both product and entrepreneurial experience in various industries and am passionate about improving user experience through design, especially in tech! I love building communities at Babson through problem-solving, program management, and execution. I have started new initiatives, shifted perspectives, and seen growth in Alpha Kappa Psi (co-ed business fraternity), Reynolds Campus Center, TEDxBabson College, and more. If you need someone who gets things done, let’s work together :)</p>
-    </p>
-    </section>
+    <!--Alpha Kappa Psi-->
+        <div class="flex-container">
+            <!--AKP Logo-->
+            <div id="akp">
+                <a href="https://akpsi.org/"><img src="images/logo.jpg" alt="akp logo" width="350"></a>
+            </div>
 
+            <!--AKP Info-->
+            <div class="text">
+                <h2>Alpha Kappa Psi</h2>
+                <p>A co-ed business fraternity with 50+ members that supports students professionally and socially with mentorship and workshops.</p>
+                <h3>Wellesley, MA &nbsp; | &nbsp; FEBRUARY 2022 - DECEMBER 2022</h3>
+                <h4>Vice President of Events</h4>
+                <ul class="bullets">
+                    <li>Built community by starting and leading the first events committee to plan skill shares and DEI discussions for 50+ brothers.</li>
+                    <li>Coordinated 5 industry experts and over 10 alumni for weekly speaker events post-chapter. Increased attendance by 63%.</li>
+                    <li>Organized retreat, a 3-day all-inclusive weekend trip to Maine for chapter bonding for 40+ people, which totaled $75 per person.</li>
+                </ul>
+            </div>
+        </div>
+
+    <!--TEDxBabson College-->
+        <div class="flex-container">
+            <!--Tedx Logo-->
+            <div id="tedx">
+                <a href="https://www.ted.com/tedx/events/48604"><img src="images/tedx.jpg" alt="tedx logo" width="350"></a>
+            </div>
+
+            <!--Tedx Info-->
+            <div class="text">
+                <h2>TEDxBabson College</h2>
+                <p>An undergraduate and graduate student-led campus-wide showcase for live TED-like talks, with 11 speakers and 200+ attendees.</p>
+                <h3>Wellesley, MA &nbsp; | &nbsp; OCTOBER 2021 - MARCH 2022</h3>
+                <h4>Head of Logistics</h4>
+                <ul class="bullets">
+                    <li>Implemented sustainability with reusable decorations, photograph backdrop, grocery bags for speaker gifts, and collaborating with Weismann Foundry to 3D print speaker gifts to reduce waste and CO2 emissions.</li>
+                    <li>Contracted with Sorenson Theater for venue, labor, equipment, and rehearsal, including streaming production live with Babson IT, within an approximately $9,000 budget. Executed building new reusable TEDx letters and hired employees accordingly.</li>
+                </ul>
+            </div>
+        </div>
+
+    <!--Reynolds Campus Center-->
+        <div class="flex-container">
+            <!--Reys Logo-->
+            <div id="reynolds">
+                <a href="https://www.babson.edu/undergraduate/student-life/residential-life/student-spaces/"><img src="images/reys.avif" alt="reys building" width="300"></a>
+            </div>
+
+            <!--Reys Info-->
+            <div class="text">
+                <h2>Reynolds Campus Center</h2>
+                <p>A hub of undergraduate activity, housing the bookstore, dining options, game room, mail room, and various student resources.</p>
+                <h3>Wellesley, MA &nbsp; | &nbsp; JANUARY 2022 - PRESENT</h3>
+                <h4>Operations Building Manager</h4>
+                <ul class="bullets">
+                    <li>Curated a new hiring procedure and training regime for 3 new positions, making a new Reynolds Campus Center team of 6.</li>
+                    <li>Oversaw all inventory and work orders of the 38,000-square-foot facility, collecting over 300+ rounds of data for frequency of campus center usage for data analysis through an engagement tracking tool in Excel to establish new hours of operations.</li>
+                        
+                        
+                </ul>
+            </div>
+        </div>
+
+
+        <!--
+        <section>
+            <div id="bobatalks">
+                <a href="https://www.bobatalks.com/"><img src="images/bobatalks.png" alt="BobaTalks Logo" width="300"></a>
+            </div>
+            
+            <div class="content">
+                <h2>BobaTalks</h2>
+                <h3>Seattle, WA &nbsp; | &nbsp; MARCH 2023 - PRESENT</h3>
+                <h4>Tech Project Manager</h4>
+                <ul class="bullets">
+                    <li>did this</li>
+                    <li>did that</li>
+                    <li>did more</li>
+                </ul>
+            </div>
+        </section>
+        
+
+        <section id="enrole">
+            <a href="https://www.enroleapp.com/"><img src="images/enrole.png" alt="Enrole Logo" width="300"></a>
+            <div class="content">
+                <h2>Enrole</h2>
+                <h3>Cupertino, CA &nbsp; | &nbsp; MAY 2022 - PRESENT</h3>
+                <h4>Product Manager Intern</h4>
+                <ul class="bullets">
+                    <li>did this</li>
+                    <li>did that</li>
+                    <li>did more</li>
+                </ul>
+            </div>
+        </section>
+        
+
+        <section id="quicksulation">
+            <a href="https://www.linkedin.com/company/quicksulation/about/"><img src="images/quicksulation.jfif" alt="quicksulation logo" width="300"></a>
+            <div class="content">
+                <h2>Quicksulation</h2>
+                <h3>Wellesley, MA &nbsp; | &nbsp; SEPTEMBER 2021 - APRIL 2022</h3>
+                <h4>Chief Technology Officier</h4>
+                <ul class="bullets">
+                    <li>did this</li>
+                    <li>did that</li>
+                    <li>did more</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="reys">
+            <a href="https://www.babson.edu/undergraduate/student-life/residential-life/student-spaces/"><img src="images/reys.avif" alt="reys building" width="300"></a>
+            <div class="content">
+                <h2>Reynolds Campus Center</h2>
+                <h3>Wellesley, MA &nbsp; | &nbsp; JANUARY 2022 - PRESENT</h3>
+                <h4>Operations Building Manager</h4>
+                <ul class="bullets">
+                    <li>did this</li>
+                    <li>did that</li>
+                    <li>did more</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+-->
+
+<!--Skills Page-->
+    <div id="skills">
+        <br>
+        <h1 id="center">Skills</h1>
+        <div class="skills-page">
+            <!--not now
+                <button onclick="showPage('page1')">ALL</button>
+                -->
+            <button onclick="showPage('page2')">PRODUCT MANAGEMENT</button>
+            <button onclick="showPage('page3')">PROJECT MANAGEMENT</button>
+            <button onclick="showPage('page4')">PROGRAM MANAGEMENT</button>
+            <button onclick="showPage('page5')">BUSINESS DEVELOPMENT</button>
+            
+            <!--not now
+            <div id="page1" class="hidden-page">
+                <p>Databases</p>
+                <ul>
+                    <li>MySQL</li>
+                </ul>
+
+                <p>Product Management Tools</p>
+                <ul> 
+                    <li>Figma</li>
+                    <li>MailChimp</li>
+                    <li>Adobe Photoshop</li>
+                </ul>
+
+                <p>Collaboration Tools</p>
+                <ul> 
+                    <li>Trello</li>
+                    <li>Notion</li>
+                    <li>Slack</li>
+                    <li>GitHub</li>
+                </ul>
+
+                <p>Languages</p>
+                <ul>
+                    <li>HTML/CSS (intermediate)</li>
+                    <li>JavaScript (beginner)</li>
+                    <li>RStudio (beginner)</li>
+                </ul>  
+                
+                <p>Project Management Skills</p>
+                <ul>
+                    <li>Communication</li>
+                    <li>Negotiation</li>
+                    <li>Time Management</li>
+                    <li>Leadership</li>
+                    <li>Risk Management</li>
+                    <li>Critical Thinking</li>
+                    <li>Problem-Solving</li>
+                </ul>
+
+                <p>Program Management Skills</p>
+                <ul>
+                    <li>Project Management</li>
+                    <li>Customer Service</li>
+                    <li>Logistics</li>
+                    <li>Conflict resolution</li>
+                    <li>Organization</li>
+                    <li>Stakeholder Management</li>
+                    <li>Budget Management</li>
+                    <li>Resource Management</li>
+                    <li>Product Development</li>
+                </ul>
+
+                <p>Product Marketing Skills</p>
+                <ul>
+                    <li>Social Media Marketing</li>
+                    <li>User studies</li>
+                    <li>A/B Testing</li>
+                    <li>Copywriting</li>
+                    <li>Product Strategy</li>
+                </ul>
+            </div>
+            -->
+
+            <div id="page2" class="hidden-page">
+                <p>Databases</p>
+                <ul>
+                    <li>MySQL</li>
+                </ul>
+
+                <p>Product Management Tools</p>
+                <ul> 
+                    <li>Figma</li>
+                    <li>MailChimp</li>
+                    <li>Adobe Photoshop</li>
+                </ul>
+
+                <p>Collaboration Tools</p>
+                <ul> 
+                    <li>Trello</li>
+                    <li>Notion</li>
+                    <li>Slack</li>
+                    <li>GitHub</li>
+                </ul>
+
+                <p>Languages</p>
+                <ul>
+                    <li>HTML/CSS (intermediate)</li>
+                    <li>JavaScript (beginner)</li>
+                    <li>RStudio (beginner)</li>
+                </ul>
+            </div>
+
+            <div id="page3" class="hidden-page">
+                <p>Project Management Skills</p>
+                <ul>
+                    <li>Communication</li>
+                    <li>Negotiation</li>
+                    <li>Time Management</li>
+                    <li>Leadership</li>
+                    <li>Risk Management</li>
+                    <li>Critical Thinking</li>
+                    <li>Problem-Solving</li>
+                </ul>
+            </div>
+
+            <div id="page4" class="hidden-page">
+                <p>Program Management Skills</p>
+                <ul>
+                    <li>Project Management</li>
+                    <li>Customer Service</li>
+                    <li>Logistics</li>
+                    <li>Conflict resolution</li>
+                    <li>Organization</li>
+                    <li>Stakeholder Management</li>
+                    <li>Budget Management</li>
+                    <li>Resource Management</li>
+                    <li>Product Development</li>
+                </ul>
+            </div>
+
+            <div id="page5" class="hidden-page">
+                <p>Product Marketing Skills</p>
+                <ul>
+                    <li>Social Media Marketing</li>
+                    <li>User studies</li>
+                    <li>A/B Testing</li>
+                    <li>Copywriting</li>
+                    <li>Product Strategy</li>
+                </ul>
+
+                <p>Management Skills</p>
+                <ul>
+                    <li>Public Speaking</li>
+                    <li>other</li>
+                </ul>
+
+                <p>Business Development Skills</p>
+                <ul>
+                    <li>Sales/Outreach</li>
+                    <li>Documentation</li>
+                </ul>
+            </div>
+
+            <script>
+                function showPage(pageId) {
+                    // Hide all pages
+                    let pages = document.querySelectorAll(".hidden-page");
+                    pages.forEach((page) => {
+                        page.style.display = "none";
+                    });
+
+                    // Show selected page
+                    document.getElementById(pageId).style.display = "block";
+                }
+            </script>
+        </div>
+    </div>
+
+<!--Contact Page-->
+    <div id="contact">
+        <h1 class="last">If we sound like a match, don't hesitate to reach out!</h1>
+        <div id="talk-button">
+            <a href="mailto:chenchristina11@gmail.com">Let's Talk</a>
+        </div>
+    </div>
+
+<!--Footer-->
+    <div class="footer">
+        <div id="contact-header">
+            <h1 id="move">Contact</h1>
+        </div>
+
+        <div class="footer-body">
+            <p>Email: cchen7@babson.edu</p>
+            <p>Phone: 646-833-9973</p>
+            <p id="so"><a href="https://www.linkedin.com/in/christina-chen-03/"><img src="images/linkedin.png" alt="linkedin logo" width="30" style="float: right;"></a></p>
+             <!--
+            <ul>
+                <li>Phone: 646-833-9973</li>
+                <li><a href="https://www.linkedin.com/in/christina-chen-03/">LinkedIn: linkedin.com/in/christina-chen-03/</a></li>
+                <li></li>
+            </ul>
+            -->
+        </div>
+    </div>
+
+    <!-- hopefully continue to figure out through Youtube how to reveal nav on scroll -->
+    <!--
+    <script>
+
+        const body = document.body;
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                body.classList.remove("scroll-up");
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-up");
+                body.classList.add("scroll-down");
+            } else if (
+                currentScroll < lastScroll && 
+                body.classList.contains("scroll-down")
+            ) {
+                body.classList.remove("scroll-down");
+                body.classList.add("scroll-up");
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
+    -->
 </body>
 </html>

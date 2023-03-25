@@ -1,0 +1,324 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+/*Navigation Bar*/
+nav {
+    width: 75%;
+    text-align: center;
+    background-color: #774E2A;
+    overflow: hidden;
+    /*z-index: 9999;*/ /*if needed to place higher than other elements*/
+    /*transition: all 300s ease-in-out;*/
+    border-radius: 24px;
+    top: 10px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%);
+    position: fixed;
+    /*change position: absolute later when you figure out*/
+}
+ul.navbar {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+li.nb {
+    display: inline-block;
+}
+a {
+    padding: 16px 20px 16px 20px;
+    width: 100px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+li a:hover {
+    background-color: #3E2818;
+    color: white;
+}
+.active {
+    background-color: #3E2818;
+    color: white;
+}
+button {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*Welcome or Home Page*/
+#welcome {
+    height: 700px;
+    background-color: #DACBB4;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+h1.first {
+    margin-top: 200px;
+    margin-bottom: -150px;
+    text-align: center;
+    padding: 0;
+    font-size: 50px;
+}
+#resume-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 8em;
+    top: 200px;
+    border-radius: 37px;
+    background-color: #906E49;
+    text-align: center;
+}
+#description {
+    margin-top: 230px;
+    font-size: 20px;
+}
+
+/*About Page*/
+#about {
+    height: 700px;
+    background-color: #3E2818;
+    color: white;
+    display: inline-block;
+    width: 100%;
+}
+.wrapper {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+#headshot {
+    margin-left: 50px;
+    width: 30%;
+}
+#about-text {
+    margin-right: 50px;
+    width: 50%;
+}
+
+/*Work Experience*/
+#work {
+    height: 2100px;
+    background-color: #906E49;
+    display: inline-block;
+    width: 100%;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #3E2818;
+}
+.flex-container > div {
+    background-color: #DACBB4;
+    margin-left: 0;
+    text-align: left;
+    /*
+    width: 400px;
+    margin-right: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    line-height: 500px;
+    font-size: 18px;
+    */
+}
+ul.bullets {
+    list-style: disc;
+}
+#bt {
+    width: 40%;
+    background-color: #774E2A;
+}
+.text {
+    width: 60%;
+    padding: 2em 5em 2em 5em;
+    background-color: #DACBB4;
+}
+#enroll {
+    width: 40%;
+    background-color: #3E2818;
+}
+#quick {
+    width: 40%;
+    background-color: #774E2A;
+}
+#akp {
+    width: 40%;
+    background-color: #3E2818;
+    margin: auto; /*figure out how to center horizontally*/
+}
+#tedx {
+    width: 40%;
+    background-color: #774E2A;
+}
+#reynolds {
+    width: 40%;
+    background-color: #3E2818;
+}
+/*combine #bt, #enroll, #quick into one later*/
+
+
+div.content{
+    padding: 4em 5em 2em 5em;
+    width: 50%;
+    margin-left: -50px;
+}
+
+#bobatalks {
+    height: 700px;
+    width: 30%;
+    margin-left: 5px;
+    /*width: 100%;*/
+    display: inline;
+}
+#enrole {
+    height: 700px;
+    width: 100%;
+    display: inline;
+}
+#quicksulation {
+    height: 700px;
+    width: 100%;
+    display: inline;
+}
+
+/*Skills Page*/
+#skills {
+    height: 700px;
+    background-color: #906E49;
+    display: inline-block;
+    /*
+    display: grid;
+    grid-template-areas: 
+    'skill-options skill-options'
+    'box1 box2'
+    'box3 box4';
+    padding: 10px;
+    */
+    width: 100%;
+}
+.skills-page {
+    width: 80%;
+    margin: auto;
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+}
+#center {
+    text-align: center;
+}
+.button, button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 1.2em;
+    height: 3.5em;
+    text-align: center;
+    font-size: 13px;
+    background-color: #DACBB4;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.hidden-page {
+    display: none;
+}
+#page2 {
+    margin-top: 30px;
+}
+
+/*Contact Page*/
+#contact {
+    height: 500px;
+    background-color: #DACBB4;
+    display: inline-block;
+    width: 100%;
+}
+h1.last {
+    margin-top: 140px;
+    text-align: center;
+    padding: 0;
+    font-size: 50px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#talk-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    position: relative;
+    width: 8em;
+    border-radius: 37px;
+    background-color: #3E2818;
+    text-align: center;
+}
+
+/*Footer*/
+div.footer {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    left: 0;
+    width: 100%;
+    font-weight: bold;
+}
+#contact-header {
+    width: 40%;
+    text-align: left;
+    margin: auto;
+    background-color: #774E2A;
+    height: 265px;
+}
+#move {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.footer-body {
+    width: 60%;
+    padding: 2em 5em 2em 5em;
+    text-align: right;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #906E49;
+    height: 200px;
+}
+#so > a {
+    float: right;
+    text-align: right;
+    margin-right: 20px;
+}
+
+/*idk*/
+.grid {
+    display: grid;
+}
+
+/* Scroll Stuff 
+
+.scroll-down {
+    header {
+    transform: translate3d(0, -100%, 0);
+    }
+}
+
+.scroll-up {
+    header {
+    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+    }
+}
+
+*/
