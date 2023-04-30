@@ -12,49 +12,113 @@
     </style>
         <link rel="stylesheet" href="styles/utube.css">
         <link rel="icon" href="path/to/favicon.ico" type="images/favicon.jpg">
+        <link rel="JavaScript" href="javascripts/index.js">
 </head>
 <body>
 
 <!--Navigation Bar-->
-    <nav>
-        <ul class="navbar">
-            <li class="nb"><a class="active" href="#welcome">Welcome</a></li>
-            <li class="nb"><a href="#about">About</a></li>
-            <li class="nb"><a href="#work">Work</a></li>
-            <li class="nb"><a href="#skills">Skills</a></li>
-            <li class="nb"><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!--
+    <div class="nav-container">
+        <div class="header-right">
+            <a href="#!" class="nav-ico"><img src="images/nav-icon.png" alt="menu-logo"></a> 
+        -->
+            <nav class="main-nav">
+                <ul class="navbar">
+                    <li><a class="active" href="#welcome">Welcome</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>  
+        <!--
+        </div>
+    </div>
+    -->
+<!--
+<script>
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    navbarToggle.addEventListener('click', () => {
+        navbarToggle.classList.toggle('active');
+    });
+</script>
+-->
     
 <!--Welcome/Home Page-->
     <div id="welcome">
         <section>
-            <h1 class="first">Hi! I'm Christina Chen.</h1>
-            <h1 class="first">A Product Manager.</h1>
+            <div>
+                <h1 id="hello">Hi! I'm Christina Chen.</h1>
+            </div>
         </section>
-
+        <!--Text Typing Animation-->
         <section>
-            <div id="resume-button">
-                <a href="https://drive.google.com/file/d/1Gny4T0yuMEqTA-41G7bQmsxOnqtn6uuE/view?usp=sharing">Resume</a>
+            <div class="container">
+                <div>
+                    <span class="text first-text"> A
+                    <span class="text sec-text">Product Manager</span>
+                </div>    
             </div>
         </section>
 
+        <script>
+            const text = document.querySelector(".sec-text");
+
+            const textLoad = () => {
+                setTimeout(() => {
+                    text.textContent = "Product Manager";
+                }, 0);
+                setTimeout(() => {
+                    text.textContent = "Project Manager";
+                }, 3000);
+                setTimeout(() => {
+                    text.textContent = "Program Manager";
+                }, 6000); //1s = 1000 millisecond
+            }
+
+            textLoad();
+            setInterval(textLoad, 10000);
+        </script>
+
+        <!--Resume button + Color-Changing Mouse Hover-->
+        <section>
+            <div id="resume-button" onmouseover="changeBgColor(this, '#3E2818')" onmouseout="changeBgColor(this, '#774E2A')">
+                <a href="https://drive.google.com/file/d/1Gny4T0yuMEqTA-41G7bQmsxOnqtn6uuE/view?usp=sharing"><p id="button-text">Resume</p></a>
+            </div>
+        </section>
+
+        <script>
+            function changeBgColor(obj, colorName) {
+                obj.style.backgroundColor= colorName;
+            }
+
+            function mouseOut(element){
+                element.style.color = 'black';
+            }
+        </script>
+
+        <!--Description-->
         <section id="description">
             <p>I’m also a part-time podcaster and lover of building communities whenever I go.</p>
         </section>
-    </div>
+    </div> 
 
 <!--About Page-->
     <div id="about">
         <div class="wrapper">
-            <div id="headshot"><img src="images/headshot.jpg" alt="headshot" title="Christina Chen" width="350"></div>
+            <div id="headshot"><img src="images/headshot.jpg" alt="headshot" title="Christina Chen" width="100%"></div>
             <div id="about-text">
                 <h1>Christina Chen (she/her)</h1>
                 <h2>Product Manager</h2>
                 <br>
                 <p>Hi everyone! I am an energetic, empathetic, and eager first-generation student who is passionate about education, women empowerment and sustainability 🙂</p>
+                <br>
                 <p>As an aspiring product manager, I am curiosity-driven in everything that I take on and enjoy learning and working in fast-paced environments. Additionally, I value opportunities that have inspiring visions and opportunities for growth.I have both product and entrepreneurial experience in various industries and am passionate about improving user experience through design, especially in tech!</p>
+                <br>
                 <p>I love building communities at Babson through problem-solving, program management, and execution. I have started new initiatives, shifted perspectives, and seen growth in Alpha Kappa Psi (co-ed business fraternity), Reynolds Campus Center, TEDxBabson College, and more. If you need someone who gets things done, let’s work together :)</p>
+                <br>
                 <p>I love learning about people and hearing their stories. I have learned so much through formal and informal mentorship, so I’d love to give back! Feel free to email me at cchen7@babson.edu. Let’s chat!</p>
             </div>
         </div>
@@ -62,21 +126,45 @@
 
 <!--Work Experience-->
     <div id="work">
+
+    <!--Develop for Good-->
+    <div class="flex-container">
+        <!--Develop for Good Logo-->
+        <div id="d4g">
+            <a href="https://www.developforgood.org/"><img src="images/d4g.png" alt="D4G Logo" title="Develop for Good" width="100%"></a>
+        </div>
+
+        <!--Develop for Good Info-->
+        <div class="text">
+            <h2>Develop for Good</h2>
+            <p>A nonprofit program that connects students to nonprofit to develop digital products.</p>
+            <br>
+            <h3>Palo Alto, CA &nbsp; | &nbsp; MAY 2023 - PRESENT</h3>
+            <h4>Incoming Product Manager</h4>
+            <br>
+            <ul class="bullets">
+                <li><p>(will update later)</p></li>
+            </ul>
+        </div>
+    </div>
+
     <!--BobaTalks-->
         <div class="flex-container">
             <!--BobaTalks Logo-->
             <div id="bt">
-                <a href="https://www.bobatalks.com/"><img src="images/bobatalks.png" alt="BobaTalks Logo" title="BobaTalks" width="350"></a>
+                <a href="https://www.bobatalks.com/"><img src="images/bobatalks.png" alt="BobaTalks Logo" title="BobaTalks" height="100%" width="100%"></a>
             </div>
 
             <!--BobaTalks Info-->
             <div class="text">
                 <h2>BobaTalks</h2>
                 <p>A nonprofit that provides students with accessible mentorship and create opportunities.</p>
+                <br>
                 <h3>Seattle, WA &nbsp; | &nbsp; MARCH 2023 - PRESENT</h3>
-                <h4>Incoming Tech Project Manager</h4>
+                <h4>Tech Project Manager</h4>
+                <br>
                 <ul class="bullets">
-                    <li>(will update later)</li>
+                    <li><p>(will update later)</p></li>
                 </ul>
             </div>
         </div>
@@ -85,7 +173,7 @@
         <div class="flex-container">
             <!--Enrole Logo-->
             <div id="enroll">
-                <a href="https://www.enroleapp.com/"><img src="images/enrole.png" alt="Enrole Logo" title="BobaTalks" width="350"></a>
+                <a href="https://www.enroleapp.com/"><img src="images/enrole.png" alt="Enrole Logo" title="Enrole" width="100%"></a>
             </div>
 
             <!--Enrole Info-->
@@ -93,24 +181,26 @@
                 <section>
                     <h2>Enrole</h2>
                     <p>A startup recruitment platform that connects startups to technical talent through Neuromatch, a technical resume translator.</p>
+                    <br>
                     <h3>Cupertino, CA &nbsp; | &nbsp; OCTOBER 2022 - JANUARY 2023</h3>
                     <h4>Product Manager Intern</h4>
+                    <br>
                     <ul class="bullets">
-                        <li>Launched Neuromatch feature (Web). Scaled user database to 90 users first week post-launch by initiating product strategy.</li>
-                        <li>Increased feature accuracy to generate non-technical highlights from 40% to 73% with collected first week resume data.</li>
-                        <li>Defined 15+ user stories, road mapping, and got ownership of 70% accepted new features, including a web onboarding platform with a resume importing feature, user guided journeys, and clip-based video recording for elevator pitch.</li>
-                        <li>Jumpstarted TikTok marketing campaign, generating over 6K in viewership and wrote copyrighting for all marketing content.</li>
-                         
+                        <li><p>Launched Neuromatch feature (Web). Scaled user database to 90 users first week post-launch by initiating product strategy.</p></li>
+                        <li><p>Increased feature accuracy to generate non-technical highlights from 40% to 73% with collected first week resume data.</p></li>
+                        <li><p>Defined 15+ user stories, road mapping, and got ownership of 70% accepted new features, including a web onboarding platform with a resume importing feature, user guided journeys, and clip-based video recording for elevator pitch.</p></li>
+                        <li><p>Jumpstarted TikTok marketing campaign, generating over 6K in viewership and wrote copyrighting for all marketing content.</p></li> 
                     </ul>
                 </section>
                 <br>
                 <section>
                     <h3>Cupertino, CA &nbsp; | &nbsp; MAY 2022 - OCTOBER 2022</h3>
                     <h4>Product Marketing Intern</h4>
+                    <br>
                     <ul class="bullets">
-                        <li>Collaborated across functions and reduced friction in user onboarding journey by identifying 50+ critical bug issues in Testflight.</li>
-                        <li>Revamped new user onboarding flow after conducting 6 user interviews and collecting 20+ user churn rate via Google Analytics.</li>
-                        <li>Automated social media marketing by implementing a Buffer integration, and reduced weekly time spent posting by 59%.</li>
+                        <li><p>Collaborated across functions and reduced friction in user onboarding journey by identifying 50+ critical bug issues in Testflight.</p></li>
+                        <li><p>Revamped new user onboarding flow after conducting 6 user interviews and collecting 20+ user churn rate via Google Analytics.</p></li>
+                        <li><p>Automated social media marketing by implementing a Buffer integration, and reduced weekly time spent posting by 59%.</p></li>
                     </ul>
                 </section>
             </div>
@@ -120,20 +210,22 @@
         <div class="flex-container">
             <!--Q Logo-->
             <div id="quick">
-                <a href="https://www.linkedin.com/company/quicksulation/about/"><img src="images/quicksulation.jfif" alt="quicksulation logo" title="Quicksulation" width="350"></a>
+                <a href="https://www.linkedin.com/company/quicksulation/about/"><img src="images/quicksulation.jfif" alt="quicksulation logo" title="Quicksulation" width="100%"></a>
             </div>
             
             <!--Q Info-->
             <div class="text">
                 <h2>Quicksulation</h2>
                 <p>An academically sponsored business venture that promotes outdoor activity within post-COVID epidemic Wellesley community.</p>
+                <br>
                 <h3>Wellesley, MA &nbsp; | &nbsp; SEPTEMBER 2021 - APRIL 2022</h3>
                 <h4>Chief Technology Officier</h4>
+                <br>
                 <ul class="bullets">
-                    <li>Led IT, Operations, and Marketing teams using Agile to maintain accurate information and inventory of website.</li>
-                    <li>Designed landing page and scaled to over 2,000 website views, as well as broke even, reaching 43.2% of sales out of state and 56.8% sales in state, all within the first month.</li>
-                    <li>Managed all technical support of company and implemented over 20+ bug fixes based on client feedback and reviews.</li>
-                    <li>Strategized collaboratively with marketing and operations team to increase completed purchases with personalization option.</li>
+                    <li><p>Led IT, Operations, and Marketing teams using Agile to maintain accurate information and inventory of website.</p></li>
+                    <li><p>Designed landing page and scaled to over 2,000 website views, as well as broke even, reaching 43.2% of sales out of state and 56.8% sales in state, all within the first month.</p></li>
+                    <li><p>Managed all technical support of company and implemented over 20+ bug fixes based on client feedback and reviews.</p></li>
+                    <li><p>Strategized collaboratively with marketing and operations team to increase completed purchases with personalization option.</p></li>
                 </ul>
             </div>
         </div>
@@ -148,19 +240,21 @@
         <div class="flex-container">
             <!--AKP Logo-->
             <div id="akp">
-                <a href="https://akpsi.org/"><img src="images/logo.jpg" alt="akp logo" title="Alpha Kappa Psi" width="350"></a>
+                <a href="https://akpsi.org/"><img src="images/logo.jpg" alt="akp logo" title="Alpha Kappa Psi" width="100%"></a>
             </div>
 
             <!--AKP Info-->
             <div class="text">
                 <h2>Alpha Kappa Psi</h2>
                 <p>A co-ed business fraternity with 50+ members that supports students professionally and socially with mentorship and workshops.</p>
+                <br>
                 <h3>Wellesley, MA &nbsp; | &nbsp; FEBRUARY 2022 - DECEMBER 2022</h3>
                 <h4>Vice President of Events</h4>
+                <br>
                 <ul class="bullets">
-                    <li>Built community by starting and leading the first events committee to plan skill shares and DEI discussions for 50+ brothers.</li>
-                    <li>Coordinated 5 industry experts and over 10 alumni for weekly speaker events post-chapter. Increased attendance by 63%.</li>
-                    <li>Organized retreat, a 3-day all-inclusive weekend trip to Maine for chapter bonding for 40+ people, which totaled $75 per person.</li>
+                    <li><p>Built community by starting and leading the first events committee to plan skill shares and DEI discussions for 50+ brothers.</p></li>
+                    <li><p>Coordinated 5 industry experts and over 10 alumni for weekly speaker events post-chapter. Increased attendance by 63%.</p></li>
+                    <li><p>Organized retreat, a 3-day all-inclusive weekend trip to Maine for chapter bonding for 40+ people, which totaled $75 per person.</p></li>
                 </ul>
             </div>
         </div>
@@ -169,18 +263,20 @@
         <div class="flex-container">
             <!--Tedx Logo-->
             <div id="tedx">
-                <a href="https://www.ted.com/tedx/events/48604"><img src="images/tedx.jpg" alt="tedx logo" title="TEDxBabson College" width="350"></a>
+                <a href="https://www.ted.com/tedx/events/48604"><img src="images/tedx.jpg" alt="tedx logo" title="TEDxBabson College" width="100%"></a>
             </div>
 
             <!--Tedx Info-->
             <div class="text">
                 <h2>TEDxBabson College</h2>
                 <p>An undergraduate and graduate student-led campus-wide showcase for live TED-like talks, with 11 speakers and 200+ attendees.</p>
+                <br>
                 <h3>Wellesley, MA &nbsp; | &nbsp; OCTOBER 2021 - MARCH 2022</h3>
                 <h4>Head of Logistics</h4>
+                <br>
                 <ul class="bullets">
-                    <li>Implemented sustainability with reusable decorations, photograph backdrop, grocery bags for speaker gifts, and collaborating with Weismann Foundry to 3D print speaker gifts to reduce waste and CO2 emissions.</li>
-                    <li>Contracted with Sorenson Theater for venue, labor, equipment, and rehearsal, including streaming production live with Babson IT, within an approximately $9,000 budget. Executed building new reusable TEDx letters and hired employees accordingly.</li>
+                    <li><p>Implemented sustainability with reusable decorations, photograph backdrop, grocery bags for speaker gifts, and collaborating with Weismann Foundry to 3D print speaker gifts to reduce waste and CO2 emissions.</p></li>
+                    <li><p>Contracted with Sorenson Theater for venue, labor, equipment, and rehearsal, including streaming production live with Babson IT, within an approximately $9,000 budget. Executed building new reusable TEDx letters and hired employees accordingly.</p></li>
                 </ul>
             </div>
         </div>
@@ -189,189 +285,59 @@
         <div class="flex-container">
             <!--Reys Logo-->
             <div id="reynolds">
-                <a href="https://www.babson.edu/undergraduate/student-life/residential-life/student-spaces/"><img src="images/reys.avif" alt="reys building" title="Reynolds Campus Center" width="300"></a>
+                <a href="https://www.babson.edu/undergraduate/student-life/residential-life/student-spaces/"><img src="images/reys.avif" alt="reys building" title="Reynolds Campus Center" height="100%" width="100%"></a>
             </div>
 
             <!--Reys Info-->
             <div class="text">
                 <h2>Reynolds Campus Center</h2>
                 <p>A hub of undergraduate activity, housing the bookstore, dining options, game room, mail room, and various student resources.</p>
+                <br>
                 <h3>Wellesley, MA &nbsp; | &nbsp; JANUARY 2022 - PRESENT</h3>
                 <h4>Operations Building Manager</h4>
+                <br>
                 <ul class="bullets">
-                    <li>Curated a new hiring procedure and training regime for 3 new positions, making a new Reynolds Campus Center team of 6.</li>
-                    <li>Oversaw all inventory and work orders of the 38,000-square-foot facility, collecting over 300+ rounds of data for frequency of campus center usage for data analysis through an engagement tracking tool in Excel to establish new hours of operations.</li>
-                        
-                        
+                    <li><p>Curated a new hiring procedure and training regime for 3 new positions, making a new Reynolds Campus Center team of 6.</p></li>
+                    <li><p>Oversaw all inventory and work orders of the 38,000-square-foot facility, collecting over 300+ rounds of data for frequency of campus center usage for data analysis through an engagement tracking tool in Excel to establish new hours of operations.</p></li>   
                 </ul>
             </div>
         </div>
 
-
-        <!--
-        <section>
-            <div id="bobatalks">
-                <a href="https://www.bobatalks.com/"><img src="images/bobatalks.png" alt="BobaTalks Logo" width="300"></a>
-            </div>
-            
-            <div class="content">
-                <h2>BobaTalks</h2>
-                <h3>Seattle, WA &nbsp; | &nbsp; MARCH 2023 - PRESENT</h3>
-                <h4>Tech Project Manager</h4>
-                <ul class="bullets">
-                    <li>did this</li>
-                    <li>did that</li>
-                    <li>did more</li>
-                </ul>
-            </div>
-        </section>
-        
-
-        <section id="enrole">
-            <a href="https://www.enroleapp.com/"><img src="images/enrole.png" alt="Enrole Logo" width="300"></a>
-            <div class="content">
-                <h2>Enrole</h2>
-                <h3>Cupertino, CA &nbsp; | &nbsp; MAY 2022 - PRESENT</h3>
-                <h4>Product Manager Intern</h4>
-                <ul class="bullets">
-                    <li>did this</li>
-                    <li>did that</li>
-                    <li>did more</li>
-                </ul>
-            </div>
-        </section>
-        
-
-        <section id="quicksulation">
-            <a href="https://www.linkedin.com/company/quicksulation/about/"><img src="images/quicksulation.jfif" alt="quicksulation logo" width="300"></a>
-            <div class="content">
-                <h2>Quicksulation</h2>
-                <h3>Wellesley, MA &nbsp; | &nbsp; SEPTEMBER 2021 - APRIL 2022</h3>
-                <h4>Chief Technology Officier</h4>
-                <ul class="bullets">
-                    <li>did this</li>
-                    <li>did that</li>
-                    <li>did more</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="reys">
-            <a href="https://www.babson.edu/undergraduate/student-life/residential-life/student-spaces/"><img src="images/reys.avif" alt="reys building" width="300"></a>
-            <div class="content">
-                <h2>Reynolds Campus Center</h2>
-                <h3>Wellesley, MA &nbsp; | &nbsp; JANUARY 2022 - PRESENT</h3>
-                <h4>Operations Building Manager</h4>
-                <ul class="bullets">
-                    <li>did this</li>
-                    <li>did that</li>
-                    <li>did more</li>
-                </ul>
-            </div>
-        </section>
-    </div>
--->
 
 <!--Skills Page-->
     <div id="skills">
         <br>
         <h1 id="center">Skills</h1>
         <div class="skills-page">
+            <div id="skills-container">
             <!--not now
                 <button onclick="showPage('page1')">ALL</button>
                 -->
-            <button onclick="showPage('page2')">PRODUCT MANAGEMENT</button>
-            <button onclick="showPage('page3')">PROJECT MANAGEMENT</button>
-            <button onclick="showPage('page4')">PROGRAM MANAGEMENT</button>
-            <button onclick="showPage('page5')">BUSINESS DEVELOPMENT</button>
-            
-            <!--not now
-            <div id="page1" class="hidden-page">
-                <p>Databases</p>
-                <ul>
-                    <li>MySQL</li>
-                </ul>
-
-                <p>Product Management Tools</p>
-                <ul> 
-                    <li>Figma</li>
-                    <li>MailChimp</li>
-                    <li>Adobe Photoshop</li>
-                </ul>
-
-                <p>Collaboration Tools</p>
-                <ul> 
-                    <li>Trello</li>
-                    <li>Notion</li>
-                    <li>Slack</li>
-                    <li>GitHub</li>
-                </ul>
-
-                <p>Languages</p>
-                <ul>
-                    <li>HTML/CSS (intermediate)</li>
-                    <li>JavaScript (beginner)</li>
-                    <li>RStudio (beginner)</li>
-                </ul>  
-                
-                <p>Project Management Skills</p>
-                <ul>
-                    <li>Communication</li>
-                    <li>Negotiation</li>
-                    <li>Time Management</li>
-                    <li>Leadership</li>
-                    <li>Risk Management</li>
-                    <li>Critical Thinking</li>
-                    <li>Problem-Solving</li>
-                </ul>
-
-                <p>Program Management Skills</p>
-                <ul>
-                    <li>Project Management</li>
-                    <li>Customer Service</li>
-                    <li>Logistics</li>
-                    <li>Conflict resolution</li>
-                    <li>Organization</li>
-                    <li>Stakeholder Management</li>
-                    <li>Budget Management</li>
-                    <li>Resource Management</li>
-                    <li>Product Development</li>
-                </ul>
-
-                <p>Product Marketing Skills</p>
-                <ul>
-                    <li>Social Media Marketing</li>
-                    <li>User studies</li>
-                    <li>A/B Testing</li>
-                    <li>Copywriting</li>
-                    <li>Product Strategy</li>
-                </ul>
+                <button onclick="showPage('page2')">PRODUCT MANAGEMENT</button>
+                <button onclick="showPage('page3')">PROJECT MANAGEMENT</button>
+                <button onclick="showPage('page4')">PROGRAM MANAGEMENT</button>
+                <button onclick="showPage('page5')">BUSINESS DEVELOPMENT</button>
             </div>
-            -->
 
             <div id="page2" class="hidden-page">
-                <p>Databases</p>
-                <ul>
+                <ul><u>Databases</u>
                     <li>MySQL</li>
                 </ul>
 
-                <p>Product Management Tools</p>
-                <ul> 
+                <ul><u>Product Management Tools</u>
                     <li>Figma</li>
                     <li>MailChimp</li>
                     <li>Adobe Photoshop</li>
                 </ul>
 
-                <p>Collaboration Tools</p>
-                <ul> 
+                <ul><u>Project Management Tools</u>
                     <li>Trello</li>
                     <li>Notion</li>
                     <li>Slack</li>
                     <li>GitHub</li>
                 </ul>
 
-                <p>Languages</p>
-                <ul>
+                <ul><u>Languages</u>
                     <li>HTML/CSS (intermediate)</li>
                     <li>JavaScript (beginner)</li>
                     <li>RStudio (beginner)</li>
@@ -379,7 +345,6 @@
             </div>
 
             <div id="page3" class="hidden-page">
-                <p>Project Management Skills</p>
                 <ul>
                     <li>Communication</li>
                     <li>Negotiation</li>
@@ -392,7 +357,6 @@
             </div>
 
             <div id="page4" class="hidden-page">
-                <p>Program Management Skills</p>
                 <ul>
                     <li>Project Management</li>
                     <li>Customer Service</li>
@@ -407,8 +371,7 @@
             </div>
 
             <div id="page5" class="hidden-page">
-                <p>Product Marketing Skills</p>
-                <ul>
+                <ul><u>Product Marketing Skills</u>
                     <li>Social Media Marketing</li>
                     <li>User studies</li>
                     <li>A/B Testing</li>
@@ -416,14 +379,12 @@
                     <li>Product Strategy</li>
                 </ul>
 
-                <p>Management Skills</p>
-                <ul>
+                <ul><u>Management Skills</u>
                     <li>Public Speaking</li>
-                    <li>other</li>
+                    <li>Negotiation</li>
                 </ul>
 
-                <p>Business Development Skills</p>
-                <ul>
+                <ul><u>Business Development Skills</u>
                     <li>Sales/Outreach</li>
                     <li>Documentation</li>
                 </ul>
@@ -448,8 +409,44 @@
     <div id="contact">
         <h1 class="last">If we sound like a match, don't hesitate to reach out!</h1>
         <div id="talk-button">
-            <a href="mailto:chenchristina11@gmail.com">Let's Talk</a>
+            <a href="mailto:chenchristina11@gmail.com"><p id="button-text">Let's Talk</p></a>
             <!--I understand that the requirement is a form, but can I do this instead? I prefer this style to fit the elements of the page.-->
+        </div>
+    </div>
+
+<!--Form Page (REMOVE AFTER SUBMISSION because I don't want a form on my website)-->
+    <div id="form">
+        <div class="form-container">
+            <form name="custom_form" id="customForm" onsubmit="return FormValidation()" action="valid.html">
+                <div class="form_box">
+                    <div class="input-row">
+                        <input type="text" name="name" placeholder="Name*">
+                        <span class="error">Please Enter Your Name</span>
+                    </div>
+                    <div class="input-row">
+                        <input type="text" name="email" placeholder="Email*">
+                        <span class="error">Please Enter Your Email</span>
+                    </div>
+                    <div class="input-row">
+                        <input type="text" name="phone" placeholder="Phone*">
+                        <span class="error">Please Enter Your Phone</span>
+                    </div>
+                    <div class="input-row">
+                        <select name="subject">
+                            <option value="">Subject*</option>
+                            <option value="Design">Web Designer</option>
+                            <option value="Develpment">Frontend Developer</option>
+                            <option value="Marketing">Backend Developer</option>
+                        </select>
+                        <span class="error">Please Enter Your Subject</span>
+                    </div>
+                    <div class="input-row">
+                        <input placeholder="Message*" name="message">
+                        <span class="error">Please Enter Your Message</span>
+                    </div>		
+                    <input type="submit" value="Submit" name="">
+                </div>
+            </form>
         </div>
     </div>
 
@@ -503,5 +500,24 @@
         });
     </script>
     -->
+
+<!--Scroll to the Top Button-->
+    <a href="#" class="to-top">
+        <p id="top">Top</p>
+    </div>
+
+    <script>
+
+        const toTop = document.querySelector(".to-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        });
+    </script>
+
 </body>
 </html>
